@@ -1,69 +1,52 @@
-// Importa os ícones da biblioteca Lucide React
-// Cada ícone será usado em um card de serviço
-import { Atom, Brain, Cpu, Database } from 'lucide-react'
+/* ============================================================
+ * Services.js — Dados dos serviços da plataforma
+ *
+ * Este arquivo exporta os dados que alimentam os cards
+ * de serviço da aplicação. Os componentes consomem esses
+ * dados via props (conteúdo dinâmico).
+ *
+ * Ícones: Atom, Brain, Database, Cpu, Zap (Lucide React)
+ * ============================================================ */
 
+import { Atom, Brain, Database, Cpu, Zap } from 'lucide-react'
 
-// Exporta um array chamado "services"
-// Esse array contém os dados dos serviços da plataforma
+/**
+ * Array de objetos representando cada serviço oferecido
+ * pela plataforma QuantumFlow.
+ *
+ * @property {JSX.Element} icon        - Ícone Lucide React do serviço
+ * @property {string}      title       - Nome do serviço
+ * @property {string}      description - Descrição detalhada do recurso
+ */
 export const services = [
-
-  // Primeiro objeto do array
-  // Representa um serviço da aplicação
   {
-    // Ícone do serviço
-    // Atom representa química/simulações moleculares
     icon: <Atom size={34} />,
-
-    // Título do card
     title: 'Simulação Molecular',
-
-    // Descrição do serviço
     description:
-      'Modelagem computacional avançada para análise estrutural.'
+      'Modelagem computacional avançada para análise de estruturas químicas e moleculares complexas.'
   },
-
-
-
-  // Segundo serviço
   {
-    // Ícone relacionado à inteligência artificial
     icon: <Brain size={34} />,
-
-    // Nome do serviço
     title: 'IA Preditiva',
-
-    // Descrição exibida no card
     description:
-      'Algoritmos inteligentes para previsão de reações químicas.'
+      'Algoritmos inteligentes para previsão de reações químicas e propriedades moleculares.'
   },
-
-
-
-  // Terceiro serviço
   {
-    // Ícone relacionado a banco de dados
     icon: <Database size={34} />,
-
-    // Título do serviço
     title: 'Banco de Dados Científico',
-
-    // Explicação do recurso
     description:
-      'Armazenamento seguro de simulações e estruturas moleculares.'
+      'Armazenamento seguro e organizado de simulações e estruturas moleculares acessíveis globalmente.'
   },
-
-
-
-  // Quarto serviço
   {
-    // Ícone relacionado a processamento computacional
     icon: <Cpu size={34} />,
-
-    // Nome do recurso
     title: 'Cloud Computing',
-
-    // Texto descritivo
     description:
-      'Processamento de cálculos quânticos em alta performance.'
+      'Processamento de cálculos quânticos em alta performance com infraestrutura escalável em nuvem.'
+  },
+  {
+    icon: <Zap size={34} />,
+    title: 'Análise Espectral',
+    description:
+      'Ferramentas avançadas para interpretação e visualização de dados espectroscópicos em tempo real.'
   }
 ]
