@@ -51,7 +51,7 @@ function Footer() {
         <div className="footer-bottom">
           <span>&copy; {anoAtual} QuantumFlow. Todos os direitos reservados.</span>
           <span className="footer-authors">
-            Desenvolvido por: <strong>Thiago & Dupla</strong>
+            Desenvolvido por: <strong>Matheus Comastri & Thiago Goulart</strong>
           </span>
         </div>
 
