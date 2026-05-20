@@ -49,7 +49,7 @@ function Metrics() {
         </div>
 
         {/* Grade de métricas — 4 cards lado a lado
-         *   xs: 1 col, sm: 2 col, lg: 4 col */}
+         *   xs:1  col, sm: 2 col, lg: 4 col */}
         <div className="row g-4">
           {metricas.map((metrica, index) => (
             <div

@@ -12,43 +12,12 @@
 
 import { Atom, Brain, Database, Cpu, Zap } from 'lucide-react'
 import ServiceCard from './ServiceCard'
+import { services } from '../Data/Services'
+
 
 function Services() {
-  // Array de serviços — cada objeto contém os dados que serão
+  // Array de serviços — cada objeto contém os dados que serão (import de services.js)
   // passados via props para o componente ServiceCard
-  const servicos = [
-    {
-      icon: <Atom size={34} />,
-      title: 'Simulação Molecular',
-      description:
-        'Modelagem computacional avançada para análise de estruturas químicas e moleculares complexas.'
-    },
-    {
-      icon: <Brain size={34} />,
-      title: 'IA Preditiva',
-      description:
-        'Algoritmos inteligentes para previsão de reações químicas e propriedades moleculares.'
-    },
-    {
-      icon: <Database size={34} />,
-      title: 'Banco de Dados Científico',
-      description:
-        'Armazenamento seguro e organizado de simulações e estruturas moleculares.'
-    },
-    {
-      icon: <Cpu size={34} />,
-      title: 'Cloud Computing',
-      description:
-        'Processamento de cálculos quânticos em alta performance com infraestrutura em nuvem.'
-    },
-    {
-      icon: <Zap size={34} />,
-      title: 'Análise Espectral',
-      description:
-        'Ferramentas avançadas para interpretação e visualização de dados espectroscópicos.'
-    }
-  ]
-
   return (
     <section className="services-section" id="servicos">
       <div className="container">
@@ -64,13 +33,20 @@ function Services() {
 
         {/* Grade de cards — responsiva com Bootstrap grid
          *   sm: 1 coluna, md: 2 colunas, lg: 3 colunas
-         *   Dados passados via props (conteúdo dinâmico) */}
+         * O .map() percorre o array "services" importado
+         * do arquivo Data/Services.js.
+         *
+         * Cada objeto do array é transformado em um
+         * componente <ServiceCard />.
+         * 
+         *   Dados passados via props (conteúdo dinâmico) -> icon, title, description*/}
         <div className="row g-4">
-          {servicos.map((servico, index) => (
+          {services.map((servico, index) => (
             <div
               key={index}
               className="col-sm-12 col-md-6 col-lg-4"
             >
+              {/* Dados do array map são enviados para o componente e enviando para ServiceCard */}
               <ServiceCard
                 icon={servico.icon}
                 title={servico.title}
